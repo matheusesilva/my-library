@@ -1,14 +1,15 @@
 let bookList = [];
 
-function Book (title,author,pages,read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
-
-Book.prototype.info = function(){
-    return `<strong>${this.title}</strong><br>by<br>${this.author}<br>${this.pages} pages`
+class Book {
+    constructor (title,author,pages,read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+    info () {
+        return `<strong>${this.title}</strong><br>by<br>${this.author}<br>${this.pages} pages`
+    }
 }
 
 const startButton = document.getElementById('start');
